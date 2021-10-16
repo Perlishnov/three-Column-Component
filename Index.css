@@ -1,0 +1,97 @@
+:root {
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-darker-cyan: hsl(179, 100%, 13%);
+  --clr-transparet-white: hsla(0, 0%, 100%, 0.75);
+  --clr-light-gray: hsl(0, 0%, 95%);
+  --font-family-body: "Lexend Deca", sans-serif;
+  --font-family-heading: "Big Shoulders Display", cursive;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: var(--clr-light-gray);
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+}
+p,
+button {
+  color: var(--clr-transparet-white);
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+}
+button {
+  background-color: var(--clr-light-gray);
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 0.8rem;
+  border: 1px #fff solid;
+}
+a {
+  text-decoration-line: none;
+}
+.container-flex {
+  width: max(90%, 70rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.container-item {
+  padding: 4rem 0.5rem;
+}
+.container-item:nth-child(1) {
+  background-color: var(--clr-bright-orange);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.container-item:nth-child(2) {
+  background-color: var(--clr-dark-cyan);
+}
+.container-item:nth-child(3) {
+  background-color: var(--clr-darker-cyan);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.container-item:nth-child(1) > button > a {
+  color: var(--clr-bright-orange);
+}
+.container-item:nth-child(2) > button > a {
+  color: var(--clr-dark-cyan);
+}
+.container-item:nth-child(3) > button > a {
+  color: var(--clr-darker-cyan);
+}
+.container-item > button > a:hover {
+  color: var(--clr-transparet-white);
+}
+.container-item:nth-child(1) > button:hover {
+  background-color: var(--clr-bright-orange);
+}
+.container-item:nth-child(2) > button:hover {
+  background-color: var(--clr-dark-cyan);
+}
+.container-item:nth-child(3) > button:hover {
+  background-color: var(--clr-darker-cyan);
+}
+@media only screen and (max-width: 414px) {
+  .container-flex {
+    flex-direction: column;
+  }
+  .container-item:nth-child(1) {
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .container-item:nth-child(2) {
+    border-radius: 0;
+  }
+  .container-item:nth-child(3) {
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
