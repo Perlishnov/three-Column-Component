@@ -29,12 +29,11 @@ button {
   border-radius: 20px;
   padding: 0.6rem 0.8rem;
   border: 1px #fff solid;
-}
-a {
   text-decoration-line: none;
+  margin-top: 2.5rem;
 }
 .container-flex {
-  width: max(90%, 70rem);
+  width: max(75%, 50rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,16 +55,16 @@ a {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.container-item:nth-child(1) > button > a {
+.container-item:nth-child(1) > button{
   color: var(--clr-bright-orange);
 }
-.container-item:nth-child(2) > button > a {
+.container-item:nth-child(2) > button{
   color: var(--clr-dark-cyan);
 }
-.container-item:nth-child(3) > button > a {
+.container-item:nth-child(3) > button{
   color: var(--clr-darker-cyan);
 }
-.container-item > button > a:hover {
+.container-item > button:hover {
   color: var(--clr-transparet-white);
 }
 .container-item:nth-child(1) > button:hover {
@@ -80,6 +79,7 @@ a {
 @media only screen and (max-width: 414px) {
   .container-flex {
     flex-direction: column;
+    width: 90%;
   }
   .container-item:nth-child(1) {
     border-radius: 0;
@@ -93,5 +93,8 @@ a {
     border-radius: 0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+  button{
+     margin-top: 0.5rem;
   }
 }
